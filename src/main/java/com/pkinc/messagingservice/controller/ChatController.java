@@ -26,14 +26,6 @@ public class ChatController {
     @Autowired
     ChatHistoryService chatHistoryService;
 
-
-    @GetMapping("/chatHistory/{userId}")
-    public PagedResponse<?> getAllUsersChatHistory(@PathVariable Long userId, @RequestParam(name = "page", defaultValue = AppConstants.DEFAULT_PAGE_NUMBER) int page,
-    @RequestParam(name = "size", defaultValue = AppConstants.DEFAULT_PAGE_SIZE) int size,
-    @RequestParam(name = "sort" ,defaultValue = "DESC") String sort){
-        return chatHistoryService.getAllUsersChatHistory(userId, page, size, sort);
-    }
-
     // @Autowired
     // private RabbitTemplate rabbitTemplate;
 
