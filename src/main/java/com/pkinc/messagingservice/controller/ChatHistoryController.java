@@ -24,4 +24,6 @@ public class ChatHistoryController {
     @RequestParam(name = "sort" ,defaultValue = "DESC") String sort){
         return chatHistoryService.getAllUsersChatHistory(userId, page, size, sort);
     }
+
+    
 }
